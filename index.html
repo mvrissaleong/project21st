@@ -3,34 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday 💖</title>
+  <title>Happy Birthday 🤍</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="hearts-container"></div>
+
+  <div class="background-blur blur1"></div>
+  <div class="background-blur blur2"></div>
 
   <header class="hero">
-    <h1>Happy 21st Birthday, My Love 🎂</h1>
-    <p class="subtitle">A little app made just for you 💌</p>
-    <button id="surpriseBtn">Open Your Surprise</button>
+    <p class="small-heading">for you, always</p>
+    <h1>Happy 21st Birthday 🤍</h1>
+    <p class="subtitle">
+      A little space on the internet made just for you.
+    </p>
+    <button id="surpriseBtn">Open Your Birthday Letter</button>
   </header>
 
-  <section class="love-letter hidden" id="letterSection">
-    <h2>A Letter For You 💖</h2>
-    <p>
-      Happy birthday baby. I made this little app because I wanted to give you
-      something personal, something you can keep and come back to whenever you want.
-      Thank you for making my life softer, happier, and so much more special.
-    </p>
+  <section class="main-letter hidden" id="letterSection">
+    <div class="letter-card">
+      <h2>My Birthday Letter To You</h2>
+      <p>
+        Happy birthday baby. I wanted to make you something you could keep,
+        revisit, and smile at whenever you wanted. Thank you for being such
+        a calm, special, lovely part of my life. You make everything softer,
+        warmer, and happier.
+      </p>
+      <p>
+        I hope this year gives you everything you deserve — joy, peace,
+        success, and all the love in the world. And I hope I get to be there
+        for all of it 🤍
+      </p>
+    </div>
   </section>
 
-  <section class="reasons">
-    <h2>21 Reasons I Love You</h2>
-    <div class="cards" id="cardsContainer"></div>
+  <section class="envelope-section">
+    <div class="section-heading">
+      <p class="small-heading">little things for you</p>
+      <h2>Open When...</h2>
+    </div>
+
+    <div class="envelopes">
+      <div class="envelope" onclick="toggleEnvelope(this)">
+        <div class="envelope-front">
+          <span>Open when you need a reminder</span>
+        </div>
+        <div class="envelope-note">
+          You are so loved, so appreciated, and so deeply special to me.
+        </div>
+      </div>
+
+      <div class="envelope" onclick="toggleEnvelope(this)">
+        <div class="envelope-front">
+          <span>Open when you miss me</span>
+        </div>
+        <div class="envelope-note">
+          Imagine me hugging you very tightly and refusing to let go.
+        </div>
+      </div>
+
+      <div class="envelope" onclick="toggleEnvelope(this)">
+        <div class="envelope-front">
+          <span>Open when you're stressed</span>
+        </div>
+        <div class="envelope-note">
+          You always figure things out. You are capable, grounded, and stronger than you think.
+        </div>
+      </div>
+
+      <div class="envelope" onclick="toggleEnvelope(this)">
+        <div class="envelope-front">
+          <span>Open when you want to smile</span>
+        </div>
+        <div class="envelope-note">
+          You are literally one of the cutest people alive and I stand by that.
+        </div>
+      </div>
+
+      <div class="envelope" onclick="toggleEnvelope(this)">
+        <div class="envelope-front">
+          <span>Open when you need motivation</span>
+        </div>
+        <div class="envelope-note">
+          I believe in you so much. Your future is bright, and I know you’ll do amazing things.
+        </div>
+      </div>
+
+      <div class="envelope" onclick="toggleEnvelope(this)">
+        <div class="envelope-front">
+          <span>Open when you want one last thing</span>
+        </div>
+        <div class="envelope-note">
+          I love you. Very, very much. Happy birthday 🤍
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="gallery">
-    <h2>Our Memories 📸</h2>
+  <section class="music-section">
+    <div class="section-heading">
+      <p class="small-heading">our song</p>
+      <h2>Press Play</h2>
+    </div>
+
+    <div class="spotify-card">
+      <iframe style="border-radius:20px"
+        src="https://open.spotify.com/embed/track/4iV5W9uYEdYUVa79Axb7Rh?utm_source=generator"
+        width="100%" height="152" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="section-heading">
+      <p class="small-heading">our memories</p>
+      <h2>A Few Favourite Moments</h2>
+    </div>
+
     <div class="gallery-grid">
       <img src="images/photo1.jpg" alt="Memory 1" />
       <img src="images/photo2.jpg" alt="Memory 2" />
@@ -38,18 +131,8 @@
     </div>
   </section>
 
-  <section class="future">
-    <h2>Things I Can't Wait To Do With You ✨</h2>
-    <ul>
-      <li>More late-night food dates</li>
-      <li>More silly little adventures</li>
-      <li>More birthdays together</li>
-      <li>More bunny-related activities 🐰</li>
-    </ul>
-  </section>
-
   <footer>
-    <p>Made with love, just for you 🤍</p>
+    <p>Made with love, just for you.</p>
   </footer>
 
   <script src="script.js"></script>
