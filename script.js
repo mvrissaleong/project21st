@@ -56,14 +56,14 @@ bunnySecret.addEventListener("click", () => {
 
 // COUNTDOWN TIMER
 // CHANGE THIS DATE/TIME TO HIS BIRTHDAY DINNER
-const dinnerDate = new Date("2026-04-10T19:30:00").getTime();
+const dinnerDate = new Date("2026-04-10T19:00:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
   const distance = dinnerDate - now;
 
   if (distance < 0) {
-    document.getElementById("countdown").innerHTML = "It’s birthday time 🤍";
+    document.getElementById("countdown").innerHTML = "It’s nyomnyom time!";
     return;
   }
 
