@@ -11,125 +11,115 @@
 </head>
 <body>
 
+  <!-- BACKGROUND MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="music/song.mp3" type="audio/mpeg">
+  </audio>
+
   <!-- LOCK SCREEN -->
   <div class="lock-screen" id="lockScreen">
     <div class="lock-box">
       <p class="small-heading">a little birthday gift</p>
       <h1>For You 🤍</h1>
-      <p class="lock-text">Enter password</p>
+      <p class="lock-text">Enter the password to open</p>
       <input type="password" id="passwordInput" placeholder="Enter password..." />
       <button onclick="checkPassword()">Unlock</button>
-      <p class="hint">Hint: not love..</p>
+      <p class="hint">Hint: not love...</p>
       <p class="error-message" id="errorMessage"></p>
     </div>
   </div>
 
-  <!-- FLOATING STARS -->
   <div class="stars"></div>
 
-  <!-- MAIN SITE -->
   <div id="mainSite" class="hidden">
-
     <div class="background-blur blur1"></div>
     <div class="background-blur blur2"></div>
 
     <header class="hero">
-      <p class="small-heading">always you</p>
+      <p class="small-heading">its always you</p>
       <h1>Happy 21st Jvan 🤍</h1>
-      <p class="subtitle">
-        A little pressie for you.
-      </p>
+      <p class="subtitle">A little pressie for you.</p>
       <button id="surpriseBtn">Open Your Birthday Letter</button>
     </header>
 
-    <!-- LETTER -->
+    <!-- MAIN LETTER -->
     <section class="main-letter hidden" id="letterSection">
       <div class="letter-card">
         <h2>My Birthday Letter To You</h2>
         <p>
-         Happy birthday baby, I love you so much. Everyday that I spend with you feels like a dream, and I can't wait for what the future holds for us. 
+          Happy birthday baby, I love you so much. Everyday that I spend with you feels like a dream, and I can't wait for what the future holds for us.
          You're the light of my life, and the only person in this world that instantly brightens up my day. Thank you for being in my life and I'm just so grateful
-         to be able to spend each day with you, and especially your big day, and with many, many more years to come. 
+         to be able to spend each day with you, and especially your big day, and with many, many more years to come.
          I love you.
         </p>
         <p>
-          I knw this year gives you everything you deserve. Joy, peace,
-          success, and all the love in the world. And I hope I get to be there
-          for all of it 🤍
+          I know this year gives you everything you deserve. Joy, peace,
+          success, and all the love in the world. And I hope I get to be there for all of it 🤍 
         </p>
       </div>
     </section>
 
-    <!-- ENVELOPES -->
+    <!-- LETTERS -->
     <section class="envelope-section">
       <div class="section-heading">
-        <p class="small-heading">little things for you</p>
+        <p class="small-heading">little letters for you</p>
         <h2>Open When...</h2>
       </div>
 
-      <div class="envelopes">
-        <div class="envelope" onclick="toggleEnvelope(this)">
-          <div class="envelope-front"><span>Open when you need a reminder</span></div>
-          <div class="envelope-note">You are so loved, so wanted, so appreciated, and so incredibly special to me.</div>
+      <div class="letters-grid">
+        <div class="paper-letter" onclick="toggleLetter(this)">
+          <div class="letter-cover">Open when you need a reminder</div>
+          <div class="letter-inside">You are so loved, so wanted, so appreciated, and so incredibly special to me.</div>
         </div>
 
-        <div class="envelope" onclick="toggleEnvelope(this)">
-          <div class="envelope-front"><span>Open when you miss me</span></div>
-          <div class="envelope-note">I'm just a phone call away and always FIENING for your coodles and kisses. Give Bomb-omb loads of kissies.</div>
+        <div class="paper-letter" onclick="toggleLetter(this)">
+          <div class="letter-cover">Open when you miss me</div>
+          <div class="letter-inside">>I'm just a phone call away and always FIENING for your coodles and kisses. Give Bomb-omb loads of kissies.</div>
         </div>
 
-        <div class="envelope" onclick="toggleEnvelope(this)">
-          <div class="envelope-front"><span>Open when you're stressed</span></div>
-          <div class="envelope-note">You always figure things out. You are capable, grounded, and stronger than you think.</div>
+        <div class="paper-letter" onclick="toggleLetter(this)">
+          <div class="letter-cover">Open when you're stressed</div>
+          <div class="letter-inside">You always figure things out. You are capable, grounded, and stronger than you think.</div>
         </div>
 
-        <div class="envelope" onclick="toggleEnvelope(this)">
-          <div class="envelope-front"><span>Open when you want to smile</span></div>
-          <div class="envelope-note">You are literally one of the besterestesttesttest people alive and I stand by that (i will slap u if u think otherwise).</div>
+        <div class="paper-letter" onclick="toggleLetter(this)">
+          <div class="letter-cover">Open when you want to smile</div>
+          <div class="letter-inside">You are literally one of the besterestesttesttest people alive and I stand by that (i will slap u if u think otherwise).</div>
         </div>
 
-        <div class="envelope" onclick="toggleEnvelope(this)">
-          <div class="envelope-front"><span>Open when you need motivation</span></div>
-          <div class="envelope-note">I believe in you, your amazing and I know you'll make it. And yes, its okay to take breaks.</div>
+        <div class="paper-letter" onclick="toggleLetter(this)">
+          <div class="letter-cover">Open when you need motivation</div>
+          <div class="letter-inside">I believe in you, you're amazing and I know you'll make it. And yes, it's okay to take breaks.</div>
         </div>
 
-        <div class="envelope" onclick="toggleEnvelope(this)">
-          <div class="envelope-front"><span>Open when you want one last thing</span></div>
-          <div class="envelope-note">I love you. Very, VERY much. Happy birthday 🤍</div>
+        <div class="paper-letter" onclick="toggleLetter(this)">
+          <div class="letter-cover">Open when you want one last thing</div>
+          <div class="letter-inside">I love you. Very, VERY much. Happy birthday 🤍</div>
         </div>
       </div>
     </section>
 
     <!-- SPOTIFY -->
-<section class="music-section">
-  <div class="section-heading">
-    <p class="small-heading">a small collection of us</p>
-    <h2>Press Play</h2>
-  </div>
+    <section class="music-section">
+      <div class="section-heading">
+        <p class="small-heading">a small collection of us</p>
+        <h2>Press Play</h2>
+      </div>
 
-  <div class="spotify-card">
-    <iframe
-      data-testid="embed-iframe"
-      style="border-radius:12px"
-      src="https://open.spotify.com/embed/playlist/0f4yr4twqC6YTfJjGTEP8r?utm_source=generator"
-      width="100%"
-      height="352"
-      frameBorder="0"
-      allowfullscreen=""
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy">
-    </iframe>
-  </div>
-
-  <div class="playlist-link-wrap">
-    <a
-      class="playlist-link"
-      href="https://open.spotify.com/playlist/0f4yr4twqC6YTfJjGTEP8r?si=9d1d044ba810458b&pt=289367917213547ab21da40ac79ea960"
-      target="_blank">
-      Open Our Playlist ♫
-    </a>
-  </div>
-</section>
+      <div class="spotify-card">
+        <iframe
+          data-testid="embed-iframe"
+          style="border-radius:12px"
+          src="https://open.spotify.com/embed/playlist/0f4yr4twqC6YTfJjGTEP8r?utm_source=generator"
+          width="100%"
+          height="352"
+          frameBorder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
 
     <!-- TIMELINE -->
     <section class="timeline-section">
@@ -138,41 +128,46 @@
         <h2>Timeline of Us</h2>
       </div>
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <h3>The Day We Met</h3>
-          <p>Not the day I was screaming behind you, but the day we met at Meltdown 2024. I didn't really know you, and you didn't really know me. It was our first time meeting in real life, outside of occassionally gayming together. I remember getting off the bus outside the British Library with you and walking home in different directions. Who knew that one day we'd be walking home together almost everyday?</p>
+      <div class="timeline-line">
+        <div class="timeline-event left">
+          <span class="timeline-date">29 Oct 2024</span>
+          <div class="timeline-content">
+            <h3>The Day We Met</h3>
+            <p>Not the day I was screaming behind you, but the day we met at Meltdown 2024. I didn't really know you, and you didn't really know me. It was our first time meeting in real life, outside of occasionally gayming together. I remember getting off the bus outside the British Library with you and walking home in different directions. Who knew that one day we'd be walking home together almost everyday?</p>
+          </div>
         </div>
-        <div class="timeline-item">
-          <h3>Our First Date</h3>
-          <p>The catastrophe of Blooms2026. We were shopping for Cacey's birthday gift and something inside of me felt different. I knew that I liked you. The next day you spent hours with me. Comforting me, eating with me, watching Wicked together and just yapping. The very next day? You FINALLY asked me out on a date. Bone Daddies, running away from Chloe, talking about Hamilton - the works. I was head over heels for you and you didn't know.</p>
-        </div>
-        <div class="timeline-item">
-          <h3>Made it Official</h3>
-          <p>Picture perfect day. I was giddy from the start, spending hours getting ready and you picked me up with a gorgeous bougquet. We walked to Chayan, got some boba, walked to dinner and had yummy food, and finally Hamilton (or so I thought).. I had never been so grateful in my life, but I didn't know things would get better. We walked across from Big Ben and you pulled out another flower from your bag, how it didn't get crushed? I don't know. And you asked me to be yours. I wanted to cry, I wanted to jump around and tell the whole world. And of course, we went for food right after.</p>
-        </div>
-        <div class="timeline-item">
-          <h3>The Moment I Knew</h3>
-          <p>It was like a feeling that was slowly crawling into my heart. But, on a random day, I woke up next to you, on your bed and thought that I couldn't imagine life without you, that I'd want to wake up next to you everyday. I just knew. And it slipped out of my mouth the very next day. </p>
-        </div>
-        <div class="timeline-item">
-          <h3>Your 21st</h3>
-          <p>And now we’re here :)</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- TOKII COUNTDOWN -->
-    <section class="countdown-section">
-      <div class="section-heading">
-        <p class="small-heading">your birthday evening</p>
-        <h2>Birthday Surprise Countdown</h2>
-      </div>
+        <div class="timeline-event right">
+          <span class="timeline-date">23 Jan 2026</span>
+          <div class="timeline-content">
+            <h3>Our First Date</h3>
+            <p>The catastrophe of Blooms 2026. We were shopping for Cacey's birthday gift and something inside of me felt different. I knew that I liked you. The next day you spent hours with me. Comforting me, eating with me, watching Wicked together and just yapping. The very next day? You FINALLY asked me out on a date. Bone Daddies, running away from Chloe, talking about Hamilton - the works. I was head over heels for you and you didn't know.</p>
+          </div>
+        </div>
 
-      <div class="countdown-card">
-        <p class="countdown-label">Until your special dinner 🤍</p>
-        <div id="countdown">Loading...</div>
-        <p class="countdown-sub">TOKii, soft lights, pretty food, and you.</p>
+<div class="timeline-event right">
+          <span class="timeline-date">4 Feb 2026</span>
+          <div class="timeline-content">
+            <h3>Made it Official</h3>
+            <p>A picture perfect day. I was giddy from the start, spending hours getting ready and you picked me up with a gorgeous bougquet. We walked to Chayan, got some boba, walked to dinner and had yummy food, and finally Hamilton (or so I thought).. I had never been so grateful in my life, but I didn't know things would get better. We walked across from Big Ben and you pulled out another flower from your bag, how it didn't get crushed? I don't know. And you asked me to be yours. I wanted to cry, I wanted to jump around and tell the whole world. And of course, we went for food right after.</p>
+          </div>
+        </div>
+
+        <div class="timeline-event left">
+          <span class="timeline-date">12 March 2026</span>
+          <div class="timeline-content">
+            <h3>The Moment I Knew</h3>
+            <p>It was like a feeling that was slowly crawling into my heart. But, on a random day, I woke up next to you, on your bed and thought that I couldn't imagine life without you, that I'd want to wake up next to you everyday. I just knew. And it slipped out of my mouth the very next day. </p>
+          </div>
+        </div>
+
+        <div class="timeline-event right">
+          <span class="timeline-date">Your 21st</span>
+          <div class="timeline-content">
+            <h3>Your Birthday</h3>
+            <p>And now we’re here :)</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -184,24 +179,63 @@
       </div>
 
       <div class="gallery-grid">
-        <img src="images/photo1.JPEG" alt="Memory 1" onclick="openLightbox(this.src)" />
-        <img src="images/photo2.JPEG" alt="Memory 2" onclick="openLightbox(this.src)" />
-        <img src="images/photo3.JPEG" alt="Memory 3" onclick="openLightbox(this.src)" />
-        <img src="images/photo4.JPEG" alt="Memory 4" onclick="openLightbox(this.src)" />
-        <img src="images/photo5.JPEG" alt="Memory 6" onclick="openLightbox(this.src)" />
-        <img src="images/photo6.JPEG" alt="Memory 4" onclick="openLightbox(this.src)" />
-        <img src="images/photo7.JPEG" alt="Memory 4" onclick="openLightbox(this.src)" />
-        <img src="images/photo8.JPEG" alt="Memory 4" onclick="openLightbox(this.src)" />
+        <div class="photo-card">
+          <img src="images/photo1.JPEG" alt="Memory 1" onclick="openLightbox(this.src)" />
+          <p>Our first little moment together 🤍</p>
+        </div>
+        <div class="photo-card">
+          <img src="images/photo2.JPEG" alt="Memory 2" onclick="openLightbox(this.src)" />
+          <p>You looking especially cute here, sorry I don’t make the rules.</p>
+        </div>
+        <div class="photo-card">
+          <img src="images/photo3.JPEG" alt="Memory 3" onclick="openLightbox(this.src)" />
+          <p>One of my favourite memories with you ☁️</p>
+        </div>
+        <div class="photo-card">
+          <img src="images/photo4.JPEG" alt="Memory 4" onclick="openLightbox(this.src)" />
+          <p>A moment I want to keep forever 💌</p>
+        </div>
+                <div class="photo-card">
+          <img src="images/photo5.JPEG" alt="Memory 4" onclick="openLightbox(this.src)" />
+          <p>A moment I want to keep forever 💌</p>
+        </div>
+                <div class="photo-card">
+          <img src="images/photo6.JPEG" alt="Memory 4" onclick="openLightbox(this.src)" />
+          <p>A moment I want to keep forever 💌</p>
+        </div>
+                <div class="photo-card">
+          <img src="images/photo7.JPEG" alt="Memory 4" onclick="openLightbox(this.src)" />
+          <p>A moment I want to keep forever 💌</p>
+        </div>
+                <div class="photo-card">
+        </div>
       </div>
     </section>
 
-    <!-- FINAL MESSAGE -->
+    <!-- FLOWER BOUQUET -->
+    <section class="bouquet-section">
+      <div class="section-heading">
+        <p class="small-heading">one more thing for you</p>
+        <h2>A Little Bouquet</h2>
+      </div>
+
+      <div class="bouquet-wrap">
+        <div class="flower" onclick="pickFlower(this)">🌷</div>
+        <div class="flower" onclick="pickFlower(this)">🌸</div>
+        <div class="flower" onclick="pickFlower(this)">🌹</div>
+        <div class="flower" onclick="pickFlower(this)">🌼</div>
+        <div class="flower" onclick="pickFlower(this)">🪻</div>
+      </div>
+      <p id="flowerMessage" class="flower-message">Click the flowers</p>
+    </section>
+
+    <!-- FINAL -->
     <section class="final-section">
       <button class="final-btn" onclick="revealFinalMessage()">One Last Thing...</button>
       <p id="finalMessage" class="hidden final-message">I love you. Happy birthday, my favourite person 🤍</p>
     </section>
 
-    <!-- BUNNY EASTER EGG -->
+    <!-- BIGGER BUNNY -->
     <img src="images/bunny.gif" alt="Secret Bunny" class="bunny-secret" id="bunnySecret" />
 
     <footer>

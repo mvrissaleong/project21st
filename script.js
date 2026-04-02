@@ -4,8 +4,10 @@ const lockScreen = document.getElementById("lockScreen");
 const mainSite = document.getElementById("mainSite");
 const errorMessage = document.getElementById("errorMessage");
 const bunnySecret = document.getElementById("bunnySecret");
+const bgMusic = document.getElementById("bgMusic");
 
 let bunnyClicks = 0;
+let flowersPicked = 0;
 
 // CHANGE THIS PASSWORD
 const correctPassword = "iluveyou";
@@ -17,8 +19,13 @@ function checkPassword() {
     lockScreen.classList.add("hidden");
     mainSite.classList.remove("hidden");
     document.body.style.overflowY = "auto";
+
+    // attempt autoplay after user interaction
+    bgMusic.play().catch(() => {
+      console.log("Autoplay blocked until further interaction");
+    });
   } else {
-    errorMessage.textContent = "Wrong password... try again 🤍";
+    errorMessage.textContent = "WRONG PASSWORD LOSER";
   }
 }
 
@@ -27,7 +34,7 @@ surpriseBtn.addEventListener("click", () => {
   letterSection.scrollIntoView({ behavior: "smooth" });
 });
 
-function toggleEnvelope(element) {
+function toggleLetter(element) {
   element.classList.toggle("open");
 }
 
@@ -44,37 +51,24 @@ function closeLightbox() {
   document.getElementById("lightbox").classList.add("hidden");
 }
 
-// BUNNY EASTER EGG
+// BIG BUNNY EASTER EGG
 bunnySecret.addEventListener("click", () => {
   bunnyClicks++;
 
-  if (bunnyClicks === 5) {
+  if (bunnyClicks === 3) {
     alert("🐰 Secret Bunny Zone Unlocked: I love you more than all the bunnies in London.");
     bunnyClicks = 0;
   }
 });
 
-// COUNTDOWN TIMER
-// CHANGE THIS DATE/TIME TO HIS BIRTHDAY DINNER
-const dinnerDate = new Date("2026-04-10T19:00:00").getTime();
+// FLOWERS
+function pickFlower(flower) {
+  flower.style.opacity = "0.35";
+  flower.style.transform = "translateY(-10px) scale(1.15)";
+  flowersPicked++;
 
-function updateCountdown() {
-  const now = new Date().getTime();
-  const distance = dinnerDate - now;
-
-  if (distance < 0) {
-    document.getElementById("countdown").innerHTML = "It’s nyomnyom time!";
-    return;
+  if (flowersPicked >= 5) {
+    document.getElementById("flowerMessage").textContent =
+      "A bouquet that will never die for the birthday boy 🤍";
   }
-
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((distance / (1000 * 60)) % 60);
-  const seconds = Math.floor((distance / 1000) % 60);
-
-  document.getElementById("countdown").innerHTML =
-    `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
-
-setInterval(updateCountdown, 1000);
-updateCountdown();
