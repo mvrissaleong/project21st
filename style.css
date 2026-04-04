@@ -428,3 +428,48 @@ footer {
     right: auto;
   }
 }
+
+/* ITINERARY */
+.itinerary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.itinerary-card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(186, 211, 235, 0.35);
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(140, 176, 207, 0.13);
+  padding: 28px;
+  text-align: center;
+}
+
+.itinerary-time {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #7a92aa;
+  margin-bottom: 12px;
+}
+
+.itinerary-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  color: #29425b;
+  margin-bottom: 12px;
+}
+
+.itinerary-desc {
+  color: #5c7288;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 0.98rem;
+}
+
+.coord-text {
+  margin-top: 18px;
+  color: #3f5a73;
+  font-size: 0.96rem;
+  line-height: 1.7;
+}

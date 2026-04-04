@@ -72,3 +72,15 @@ function pickFlower(flower) {
       "A bouquet that will never die for the birthday boy 🤍";
   }
 }
+
+function revealCoordinates(elementId, unlockTime) {
+  const now = new Date();
+  const unlock = new Date(unlockTime);
+
+  if (now >= unlock) {
+    document.getElementById(elementId).classList.remove("hidden");
+  } else {
+    const minsLeft = Math.ceil((unlock - now) / 60000);
+    alert(`This clue unlocks in ${minsLeft} minute(s) ⏳`);
+  }
+}
