@@ -18,6 +18,7 @@ function checkPassword() {
   if (input === correctPassword.toLowerCase()) {
     lockScreen.classList.add("hidden");
     mainSite.classList.remove("hidden");
+    showLuckToast();
     document.body.style.overflowY = "auto";
 
     // attempt autoplay after user interaction
@@ -83,4 +84,22 @@ function revealCoordinates(elementId, unlockTime) {
     const minsLeft = Math.ceil((unlock - now) / 60000);
     alert(`This clue unlocks in ${minsLeft} minute(s) ⏳`);
   }
+}
+
+function showLuckToast() {
+  const toast = document.getElementById("luckToast");
+
+  toast.classList.remove("hidden");
+
+  setTimeout(() => {
+    toast.classList.add("show");
+  }, 100);
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+
+    setTimeout(() => {
+      toast.classList.add("hidden");
+    }, 500);
+  }, 6500);
 }
